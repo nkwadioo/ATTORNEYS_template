@@ -4,20 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mthombeni Attorneys | Babueledi</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Rakkas&family=Saira+Condensed&family=Sansita&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <div class="main-grid">
         <header class="header">
-            <img src="images/full-logo.svg" alt="company logo">
-            <div class="company-name">
-                <p class="comapany-name__main">Mthombeni</p>
-                <span>Attorneys</span>
-                <span></span>
-                <span>Babueledi</span>
+            <img src="images/full-logo.svg" class="logo" alt="company logo">
+            <div class="company_name">
+                <div class="comapany_name__main">Mthombeni</div>
+                <div class="sub">
+                    <span class="comapany_name__title">Attorneys</span>
+                    <span class="comapany_name__sport"></span>
+                    <span class="comapany_name__title">Babueledi</span>
+                </div>
+                
+            </div>
+            <div class="nav__icon">
+                <svg width="56" height="6" viewBox="0 0 56 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3 3H53" stroke="black" stroke-width="5" stroke-linecap="round"/>
+                </svg>
+                <svg width="56" height="6" viewBox="0 0 56 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15 3H53" stroke="black" stroke-width="5" stroke-linecap="round"/>
+                </svg>
+                <svg width="56" height="6" viewBox="0 0 56 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M30 3H53" stroke="black" stroke-width="5" stroke-linecap="round"/>
+                </svg>
             </div>
             <nav class="nav">
-                <ul>
-                    <li class="nav__icon"></li>
+                <ul class="nav__links">
                     <li class="nav__item">
                         <a href="" class="nav__link">Home</a>
                     </li>
@@ -44,7 +62,9 @@
         <main class="home">
             <div class="slider">
                 <div class="slider__item">
-                    <img src="images/slider-1.jpg" alt="" class="slider__image">
+                    <div class="image--wraper">
+                        <!-- <img src="images/slider-1.jpg" alt="" class="slider__image"> -->
+                    </div>
                     <div class="slider__text">
                         With you <br> every step of the way
                     </div>
@@ -60,21 +80,21 @@
             </div>
 
             <form action="" class="form">
-                <legend>Contuct US</legend>
-
+                <legend>Contact US</legend>
                 <div class="form-group">
-                    <input type="text">
-                    <label for="">Full Names</label>
+                    <div class="mat-div ">
+                        <input type="text" name="name" id="name"  class="mat-input" autofocus="autofocus" required="required">
+                        <label for="name" class="mat-label">Full Names</label>
+                    </div>
+                    <div class="mat-div">
+                        <input type="text" name="number" id="numbar" class="mat-input" required="required">
+                        <label for="number" class="mat-label">Cell / Phone number</label>
+                    </div>
+                    <div class="mat-div">
+                        <input type="text" name="email" id="email" class="mat-input" required="required">
+                        <label for="email" class="mat-label">Email</label>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <input type="text">
-                    <label for="">Cell /Phone number</label>
-                </div>
-                <div class="form-group">
-                    <input type="text">
-                    <label for="">Email</label>
-                </div>
-
                 <button class="btn btn-outline-primary">Submit</button>
             </form>
         </main>
