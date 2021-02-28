@@ -1,0 +1,114 @@
+footer {
+  margin: -1rem;
+  margin-top: 2rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: var(--sx-grid);
+      grid-template-columns: var(--sx-grid);
+}
+
+footer:after {
+  content: '';
+  width: 100%;
+  height: 81px;
+  background: var(--clr-bg-dark);
+  position: relative;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  grid-column: 1 / -1;
+}
+
+footer .footer__info {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-column: 2 / 4;
+  margin-top: 0;
+  padding: 0;
+  width: -webkit-fill-available;
+  background: var(--clr-highlight);
+  border-radius: 0 0 20px 20px;
+  display: -ms-grid !important;
+  display: grid !important;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+}
+
+footer .footer__info li {
+  list-style-type: none;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+  text-align: center;
+}
+
+footer .footer__info li div {
+  font-weight: 900;
+}
+
+footer .nav {
+  display: none;
+}
+
+@media (min-width: 525px) {
+  footer {
+    -ms-grid-columns: 1fr 3fr 1fr;
+        grid-template-columns: 1fr 3fr 1fr;
+    -ms-grid-rows: 81px (125px)[3] 20px;
+        grid-template-rows: 81px repeat(3, 125px) 20px;
+    background-color: white;
+    padding-bottom: 3rem;
+  }
+  footer::after {
+    z-index: 2;
+  }
+  footer .nav, footer .company_name,
+  footer .footer__info,
+  footer .copyright {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-grid-column: 2;
+    grid-column: 2;
+  }
+  footer .nav {
+    -ms-grid-row: 2;
+    grid-row: 2;
+    position: relative;
+  }
+  footer .nav::after {
+    content: '';
+    border-bottom: 2px solid;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+  }
+  footer .nav ul {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    width: 100%;
+    justify-items: center;
+    -ms-flex-line-pack: end;
+        align-content: flex-end;
+  }
+  footer .company_name {
+    font-family: var(--ff-headers);
+    -ms-grid-row: 3;
+    grid-row: 3;
+  }
+  footer .footer__info {
+    -ms-grid-row: 4;
+    grid-row: 4;
+    background-color: inherit;
+  }
+  footer .copyright {
+    -ms-grid-row: 5;
+    grid-row: 5;
+    -ms-grid-column-align: center;
+        justify-self: center;
+  }
+}
+/*# sourceMappingURL=footer.css.map */

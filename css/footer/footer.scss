@@ -1,0 +1,106 @@
+footer {
+    margin: -1rem;
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: var(--sx-grid);
+    // background-color: var(--clr-bg-dark);;
+    
+    &:after {
+        content: '';
+        // width: calc(100vw);
+        width: 100%;
+        height: 81px;
+        background: var(--clr-bg-dark);
+        // position: absolute;
+        position: relative;
+        left: 0;
+        right: 0;
+        z-index: -1;
+
+        grid-column: 1 / -1;
+    }
+    
+    .footer__info {
+        grid-column: 2 / 4;
+        margin-top: 0;
+        padding: 0;
+        width: -webkit-fill-available;
+        background: var(--clr-highlight);
+        border-radius: 0 0 20px 20px;
+        display: grid !important;
+        grid-template-columns: 1fr 1fr 1fr;
+        justify-items: center;
+    }
+    
+    .footer__info li {
+        list-style-type: none;
+        width: min-content;
+        text-align: center;
+        
+        div {
+            font-weight: 900;
+        }
+    }
+    
+    .nav {
+        display: none;
+    }
+}
+
+
+@media (min-width: 525px) {
+    
+    footer {
+        grid-template-columns: 1fr 3fr 1fr;
+        grid-template-rows: 81px repeat(3, 125px) 20px;
+        background-color: white;
+        padding-bottom: 3rem;
+
+        &::after {
+            z-index: 2;
+        }
+
+        .nav, .company_name,
+        .footer__info,
+        .copyright {
+            display: flex;
+            grid-column: 2;
+        }
+
+        .nav {
+            grid-row: 2;
+            position: relative;
+            &::after {
+                content: '';
+                border-bottom: 2px solid;
+                width: 100%;
+                position: absolute;
+                bottom: 0;
+            }
+
+            ul {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                width: 100%;
+                justify-items: center;
+                align-content: flex-end;
+            }
+        }
+
+        .company_name {
+            font-family: var(--ff-headers);
+            grid-row: 3;
+        }
+
+        .footer__info {
+            grid-row: 4;
+            background-color: inherit;
+        }
+
+        .copyright {
+            grid-row: 5;
+            justify-self: center;
+            
+        }
+    }
+}
