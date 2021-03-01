@@ -241,7 +241,7 @@ footer .footer__info li div {
   font-weight: 900;
 }
 
-@media (max-width: 520px) {
+@media (max-width: 525px) {
   footer .nav, footer .company_name,
 footer .copyright {
     display: none;
