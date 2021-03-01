@@ -1,0 +1,92 @@
+@use '../abstracts' as *;
+
+
+.nav {
+    font-family: $ff-headers;
+    font-size: $fs-small;
+    height: fit-content; // comment out if otherwise
+    &, &__info {
+        display: none;
+    }
+
+    li {
+        list-style: none;
+    }
+
+    li a {
+        text-decoration: none;
+        color: $clr-text;
+        opacity: 0.6;
+    }
+    .nav__links {
+        display: flex;
+        justify-content: flex-end;
+        gap: .5rem;
+    }
+
+    .nav__links .nav__item {
+        position: relative;
+        padding: .5rem 1rem;
+        min-width: max-content;
+    }
+
+    .nav__links .nav__item svg {
+        display: block;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0; 
+        width: 100%; 
+        z-index: -1;
+    }
+    .nav__links .nav__item rect {
+        fill: none;
+        stroke: inherit;
+        stroke-width: 2;
+        stroke-dasharray: 22, 69;
+        transition: all 0.75s linear;
+    }
+
+    .active.nav__link {
+        opacity: 1;
+    }
+
+    .active.nav__link + svg rect,
+    .nav__link:hover + svg rect {
+        stroke: $clr-accent;
+        stroke-width: 7px;
+        stroke-dashoffset: 48;
+        transition: all 1.55s cubic-bezier(0.19, 1, 0.22, 1);
+    }
+
+    .active.nav__link-home + svg rect,
+    .nav__link-home:hover + svg rect {
+        stroke-dasharray: 35, 155;
+    }
+
+    .active.nav__link-about + svg rect,
+    .nav__link-about:hover + svg rect {
+        stroke-dasharray: 40, 181;
+    }
+
+    .active.nav__link-services + svg rect,
+    .nav__link-services:hover + svg rect {
+        stroke-dasharray: 40, 175;
+    }
+}
+
+@media (min-width: 830px) {
+        .nav {
+            grid-row: 1;
+            grid-column: 3 / 5;
+            display: inline;
+        }
+        
+        
+}
+
+@media (min-width: 1038px) {
+    .header .nav ul.nav__links {
+        gap: 5rem;
+    }
+}

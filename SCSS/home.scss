@@ -1,4 +1,7 @@
 
+@use 'components' as *;
+@use 'abstracts' as *;
+
 .slider {
     position: relative;
     
@@ -13,15 +16,15 @@
     }
     
     .slider__text{
-        font-family: var(--ff-body);
-        font-size: var(--fs-mid);
+        font-family: $ff-body;
+        font-size: $fs-mid;
         text-align: center;
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
         width: 100%;
-        background-color: var(--clr-slide-shade);
+        background-color: $clr-slide-shade;
         padding: 1.5rem;
     }
 }
@@ -33,8 +36,8 @@ form {
     flex-direction: column;
     
     legend {
-        font-family: var(--ff-headers);
-        font-size: var(--fs-big);
+        font-family: $ff-headers;
+        font-size: $fs-big;
         text-align: center;
     }
     
@@ -44,12 +47,12 @@ form {
 
     legend span::after {
         content: '';
-        width: calc(100% - 4.6ch);
+        width: calc(100% - 2ch);
         height: 2px;
         position: absolute;
         background: #9e9e9e;
         bottom: -0.1em;
-        left: 2.7ch;
+        left: 1ch;
         border: 2px solid #9e9e9e;
         border-radius: 10px;
     }
@@ -59,14 +62,14 @@ form {
     }
     
     .mat-div {
-        font-family: var(--ff-body);
+        font-family: $ff-body;
         display: flex;
         height: 47px;
         margin-top: 2.3rem;
-        background-color: var(--clr-bg-input);
+        background-color: $clr-bg-input;
         
         .mat-label {
-            font-size: var(--fs-mid);
+            font-size: $fs-mid;
             font-weight: 400;
             opacity: 0.7;
             pointer-events: none;
@@ -85,9 +88,9 @@ form {
             border: none;
             outline: none;
             padding: 2px 2px;
-            font-size: var(--fs-mid);
+            font-size: $fs-mid;
             border-bottom: 5px solid #151515;
-            font-family: var(--ff-body);
+            font-family: $ff-body;
 
             &::-webkit-input-placeholder {
                 color: transparent;
@@ -105,45 +108,40 @@ form {
 }
 
 
-
 /*  Thanks to https://codepen.io/MithunPradhan/pen/ayLpob?editors=0100
 for mat design
 */
 
 button.btn {
-    font-family: var(--ff-body);
+    font-family: $ff-body;
     letter-spacing: 3px;
     font-weight: 500;
     padding: .6rem 5rem;
     width: fit-content;
     background-color: transparent;
-}
 
-button.btn.btn-outline-primary {
-    margin: 49px auto;
-    border: 4px solid black;
-    font-size: var(--fs-small);
-    transition: 240ms cubic-bezier(0.14, 0.81, 0.25, 1);
-}
+    &.btn-outline-primary {
+        margin: 49px auto;
+        border: 4px solid black;
+        font-size: $fs-small;
+        transition: 240ms cubic-bezier(0.14, 0.81, 0.25, 1);
 
-button.btn.btn-outline-primary:hover,
-button.btn.btn-outline-primary:focus {
-    font-weight: 600;
-    color: var(--clr-bg-light);
-    background-color: var(--clr-text);
-    border: 4px solid #ffffff45;
-    outline: 3px solid #d4d4d442;
-    outline-offset: -12px;
+        &:hover,
+        &:focus {
+            font-weight: 600;
+            color: $clr-bg-light;
+            background-color: $clr-text;
+            border: 4px solid #ffffff45;
+            outline: 3px solid #d4d4d442;
+            outline-offset: -12px;
+        }
+    }
 }
 
 @media (min-width: 525px) {
     
     .home .slider .image--wraper{
         max-height: 460px;
-    }
-
-    .main {
-        display: block;
     }
 }
 

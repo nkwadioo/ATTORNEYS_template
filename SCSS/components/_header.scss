@@ -1,0 +1,86 @@
+@use '../abstracts' as *;
+
+.header {
+    font-family: $ff-headers;
+    background-color: $clr-bg-light;
+    padding-top: 1rem;
+    width: 100%;
+    display: grid;
+    grid-template-columns: $sx-grid;
+    // position: sticky;
+    // top: 0;
+    z-index: 2;
+
+    .company_name {
+        grid-row: 2;
+        grid-column: span 5;
+        
+        
+        &::before {
+            content: '';
+            width: calc(100% + 2rem);
+            height: 3px;
+            background-color: $clr-text;
+            position: absolute;
+            top: -.9rem;
+        }
+    }
+
+    .nav__icon {
+        grid-column: -1;
+        padding: .3rem .2rem;
+        width: 72px;
+        svg {
+            display: block;
+
+            &:not(:first-child) {
+                margin-top: .8rem;
+            }
+        }
+    }
+
+    
+}
+
+
+
+@media (min-width: 475px) {
+    .header {
+        position: relative;
+        padding-left: 0.8rem;
+
+        &::after {
+            content: '';
+            width: calc(100vw + 2rem);
+            height: 3px;
+            background-color: $clr-text;
+            position: absolute;
+            bottom: 1.2rem;
+            left: -2vw;
+        }
+
+        .company_name {
+            grid-row: 1 ;
+            grid-column: 2 / 5;
+        
+            margin-bottom: 2.5rem;
+            margin-top: 0;
+            max-width: 290px;
+
+            &::before{
+                display: none;
+            }
+        }
+    }
+}
+
+@media (min-width: 780px) {
+    .header::after {
+        width: calc(200vw + 2rem);
+        left: -50vw;
+    }
+}
+
+
+@media (min-width: 830px) {
+}
