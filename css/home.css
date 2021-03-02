@@ -67,13 +67,16 @@ img {
   grid-template-columns: minmax(3rem, 4rem) 1fr 2fr minmax(3rem, 4rem);
   z-index: 2;
 }
+.header .logo {
+  padding-left: 0.8rem;
+}
 .header .company_name {
   grid-row: 2;
   grid-column: span 5;
 }
 .header .company_name::before {
   content: "";
-  width: calc(100% + 2rem);
+  width: 100%;
   height: 3px;
   background-color: #000;
   position: absolute;
@@ -98,7 +101,7 @@ img {
   }
   .header::after {
     content: "";
-    width: calc(100vw + 2rem);
+    width: calc(100vw);
     height: 3px;
     background-color: #000;
     position: absolute;
@@ -117,9 +120,14 @@ img {
   }
 }
 @media (min-width: 780px) {
+  .header {
+    position: unset;
+  }
   .header::after {
-    width: calc(200vw + 2rem);
-    left: -50vw;
+    width: calc(100vw);
+    left: 0;
+    right: 0;
+    top: 89px;
   }
 }
 .nav {
@@ -192,6 +200,7 @@ img {
     grid-row: 1;
     grid-column: 3/5;
     display: inline;
+    z-index: 1;
   }
 }
 @media (min-width: 1038px) {
@@ -200,7 +209,6 @@ img {
   }
 }
 footer {
-  margin: -1rem;
   margin-top: 2rem;
   display: grid;
   grid-template-columns: minmax(3rem, 4rem) 1fr 2fr minmax(3rem, 4rem);
