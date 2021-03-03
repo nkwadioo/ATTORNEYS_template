@@ -86,3 +86,30 @@ img {
         border-radius: 50%;
     }
 }
+
+.icon {
+    font-family: $ff-headers;
+    text-align: center;
+    padding-top: 1rem;
+    margin-bottom: 2rem;
+    position: relative;
+    h3 {
+        font-size: $fs-big - 0.6rem;
+        line-height: 20px
+    }
+
+    @media (max-width: 477px) {
+        
+        &::before {
+            content: '';
+            background-color: $clr-text;
+            width: 60%;
+            height: 3px;
+            position: absolute;
+            top: 0;
+            left: 20%;
+            border-radius: 10px;
+        }
+    }
+
+}

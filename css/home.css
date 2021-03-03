@@ -58,6 +58,30 @@ img {
   border-radius: 50%;
 }
 
+.icon {
+  font-family: "Sansita", sans-serif;
+  text-align: center;
+  padding-top: 1rem;
+  margin-bottom: 2rem;
+  position: relative;
+}
+.icon h3 {
+  font-size: 2.02rem;
+  line-height: 20px;
+}
+@media (max-width: 477px) {
+  .icon::before {
+    content: "";
+    background-color: #000;
+    width: 60%;
+    height: 3px;
+    position: absolute;
+    top: 0;
+    left: 20%;
+    border-radius: 10px;
+  }
+}
+
 .header {
   font-family: "Sansita", sans-serif;
   background-color: #F0EEEE;

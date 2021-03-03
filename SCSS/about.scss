@@ -2,40 +2,22 @@
 @use 'abstracts' as *;
 
 .about {
-
+        font-family: $ff-body;
     &__company {
-        font-family: $ff-headers;
         max-width: 950px;
         margin: 0 auto;
-        margin-top: 1rem;
         margin-bottom: 5rem;
-        position: relative;
-        &::before {
-            content: '';
-            background-color: $clr-text;
-            width: 80%;
-    height: 3px;
-    position: absolute;
-    top: 0;
-    left: 10%;
-            border-radius: 10px;
-        }
-
-        .icon {
-            text-align: center;
-            padding-top: 1rem;
-            margin-bottom: 2rem;
-            // line-height: 1px;
-            h3 {
-                font-size: $fs-big - 0.6rem;
-                line-height: 20px
-            }
-        }
-
+        
+        
+        
+        
         .paragraphes {
             max-width: 70ch;
             margin: 0 auto;
             padding: 0 1rem;
+            font-family: $ff-headers;
+            
+
             p {
                 margin-bottom: 1rem;
                 font-size: $fs-small;
