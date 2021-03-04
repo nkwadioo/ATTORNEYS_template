@@ -274,9 +274,14 @@ footer .footer__info li div {
 }
 
 @media (max-width: 525px) {
-  footer .nav, footer .company_name,
+  footer .company_name,
 footer .copyright {
     display: none;
+  }
+  footer .nav {
+    display: flex !important;
+    grid-column: 1/-1;
+    margin: 0 auto;
   }
 }
 @media (min-width: 525px) {
@@ -343,6 +348,7 @@ footer .copyright {
 }
 .slider {
   font-family: "Saira Condensed", sans-serif;
+  position: relative;
 }
 .slider__nav {
   display: grid;
@@ -397,27 +403,36 @@ footer .copyright {
   background-color: #C4C4C4;
   padding-top: 7rem;
   z-index: -1;
-  position: relative;
+  position: absolute;
   margin-top: -90px;
+  left: 0;
+  right: 0;
   height: 500px;
 }
-.slider .descriptions .old {
+.slider .old {
   display: none;
 }
-.slider .descriptions .text {
-  padding: 1rem 2rem;
+.slider .text {
+  padding: 1px 1rem 2rem;
+  margin-top: 1rem;
   z-index: 2;
   font-size: 1.5rem;
   height: 333px;
   overflow-y: scroll;
 }
-.slider .descriptions .text h4 {
+.slider .text .header-wrapper {
+  background-color: #c4c4c4;
+  position: sticky;
+  top: -1.7px;
+  padding-bottom: 0.1rem;
+}
+.slider .text h4 {
   margin: 0 auto;
   width: fit-content;
   margin-bottom: 1.5rem;
   position: relative;
 }
-.slider .descriptions .text h4::after {
+.slider .text h4::after {
   content: "";
   background-color: white;
   width: 7ch;
@@ -426,7 +441,7 @@ footer .copyright {
   left: calc(50% - 4ch);
   bottom: -2px;
 }
-.slider .descriptions .text p {
+.slider .text p {
   max-width: 70ch;
   margin: 0 auto;
   margin-bottom: 1rem;

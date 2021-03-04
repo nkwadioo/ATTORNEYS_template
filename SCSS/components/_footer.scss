@@ -53,9 +53,16 @@ footer {
 @media (max-width: 525px) {
     footer {
 
-        .nav, .company_name,
+        // .nav
+        .company_name,
         .copyright {
             display: none;
+        }
+
+        .nav {
+            display: flex !important;
+            grid-column: 1 / -1;
+            margin: 0 auto;
         }
     }
 }

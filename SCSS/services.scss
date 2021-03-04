@@ -3,6 +3,7 @@
 
 .slider {
         font-family: $ff-body;
+        position: relative;
     &__nav {
         
         display: grid;
@@ -68,45 +69,55 @@
         background-color: $clr-highlight;
         padding-top: 7rem;
         z-index: -1;
-        position: relative;
+        position: absolute;
         margin-top: -90px;
+        left: 0;
+        right: 0;
 
         height: 500px;
         // overflow-y: scroll;
 
-        .old {
-            display: none;
+    }
+    .old {
+        display: none;
+    }
+
+    .text {
+        padding: 1px 1rem 2rem;
+        margin-top: 1rem;
+        z-index: 2;
+        font-size: $fs-mid;
+        height: 333px;
+        overflow-y: scroll;
+
+        .header-wrapper {
+            background-color: #c4c4c4;
+            position: sticky;
+            top: -1.7px;
+            padding-bottom: 0.1rem;
         }
 
-        .text {
-            padding: 1rem 2rem;
-            z-index: 2;
-            font-size: $fs-mid;
-            height: 333px;
-            overflow-y: scroll;
+        h4 {
+            margin: 0 auto;
+            width: fit-content;
+            margin-bottom: 1.5rem;
+            position: relative;
 
-            h4 {
-                margin: 0 auto;
-                width: fit-content;
-                margin-bottom: 1.5rem;
-                position: relative;
-
-                &::after {
-                    content: '';
-                    background-color: white;
-                    width: 7ch;
-                    height: 3px;
-                    position: absolute;
-                    left: calc(50% - 4ch);
-                    bottom: -2px;
-                }
-
+            &::after {
+                content: '';
+                background-color: white;
+                width: 7ch;
+                height: 3px;
+                position: absolute;
+                left: calc(50% - 4ch);
+                bottom: -2px;
             }
-            p {
-                max-width: 70ch;
-                margin: 0 auto;
-                margin-bottom: 1rem;
-            }
+
+        }
+        p {
+            max-width: 70ch;
+            margin: 0 auto;
+            margin-bottom: 1rem;
         }
     }
 }

@@ -274,9 +274,14 @@ footer .footer__info li div {
 }
 
 @media (max-width: 525px) {
-  footer .nav, footer .company_name,
+  footer .company_name,
 footer .copyright {
     display: none;
+  }
+  footer .nav {
+    display: flex !important;
+    grid-column: 1/-1;
+    margin: 0 auto;
   }
 }
 @media (min-width: 525px) {
