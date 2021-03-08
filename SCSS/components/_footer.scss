@@ -31,11 +31,13 @@ footer {
         width: -webkit-fill-available;
         height: 115px;
         margin: 0px 2rem;
+        margin-top: -14px;
         padding: 0;
-        background: $clr-highlight;
+        background: $clr-bg-light;
         border-radius: 0 0 20px 20px;
         align-items: baseline;
         justify-items: center;
+        box-shadow: -1px 12px 10px black;
         
         li {
             list-style-type: none;
@@ -86,6 +88,11 @@ footer {
         .copyright {
             display: flex;
             grid-column: 3;
+        }
+
+        .footer__info {
+            margin-top: 0px;
+            box-shadow: none;
         }
 
         .nav {

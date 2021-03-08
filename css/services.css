@@ -218,7 +218,6 @@ img {
 .nav .nav__link-services:hover + svg rect {
   stroke-dasharray: 40, 175;
 }
-
 @media (min-width: 830px) {
   .nav {
     grid-row: 1;
@@ -257,11 +256,13 @@ footer .footer__info {
   width: -webkit-fill-available;
   height: 115px;
   margin: 0px 2rem;
+  margin-top: -14px;
   padding: 0;
-  background: #C4C4C4;
+  background: #F0EEEE;
   border-radius: 0 0 20px 20px;
   align-items: baseline;
   justify-items: center;
+  box-shadow: -1px 12px 10px black;
 }
 footer .footer__info li {
   list-style-type: none;
@@ -300,6 +301,10 @@ footer .footer__info,
 footer .copyright {
     display: flex;
     grid-column: 3;
+  }
+  footer .footer__info {
+    margin-top: 0px;
+    box-shadow: none;
   }
   footer .nav {
     grid-column: 2/5;
@@ -349,6 +354,7 @@ footer .copyright {
 .slider {
   font-family: "Saira Condensed", sans-serif;
   position: relative;
+  margin-bottom: 7rem;
 }
 .slider__nav {
   display: grid;

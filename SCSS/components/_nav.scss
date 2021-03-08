@@ -73,6 +73,10 @@
     .nav__link-services:hover + svg rect {
         stroke-dasharray: 40, 175;
     }
+
+    &.open.xs {
+        
+    }
 }
 
 @media (min-width: 830px) {
